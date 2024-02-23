@@ -55,7 +55,7 @@ bot.on('message', async (msg) => {
     const durationMinutes = Math.floor(response.data.duration / 60);
     const durationSeconds = (response.data.duration % 60).toFixed(2);
 
-    const replyMessage = `Title: ${response.data.title}\nFilesize: ${fileSizeInMB} MB\nDuration: ${durationMinutes} minutes ${durationSeconds} seconds\nLink: ${response.data.link}`;
+  const replyMessage = `Title: ${response.data.title}\nFilesize: ${fileSizeInMB} MB\nDuration: ${durationMinutes} minutes ${durationSeconds} seconds\nLink: <a href="${response.data.link}">Download</a>`;
 
 
     bot.sendMessage(chatId, replyMessage);
